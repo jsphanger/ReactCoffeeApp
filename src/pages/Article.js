@@ -66,7 +66,6 @@ class Article extends Component{
             this.setState({title: results.data.title[0].text });
             this.setState({image: results.data.image.url });
 
-              { /* PROBLEM - Each time we slice something we add x characters.  This throws off the original positions */ }
               var offset = 0;
               var listCapture = "";
               var eleCount = 0;
@@ -165,7 +164,7 @@ class Article extends Component{
         { /* Expanded view for feature listings */ }
         {this.state.size === "feature" &&
           <div key={this.state.id} className="article feature">
-
+          
             <img className="articlePicture" src={ this.state.image } alt="" />
               <div>
                 <h1>{this.state.title}</h1>
@@ -175,6 +174,9 @@ class Article extends Component{
                       })}
                 </div>
               </div>
+
+              <div><Link to="/">Back to main page</Link></div>
+
           </div>
         }
       </div>

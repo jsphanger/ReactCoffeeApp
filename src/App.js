@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Prismic from 'prismic-javascript';
 import Header from './components/Header.js';
 import HomePage from './pages/HomePage.js';
 import Article from './pages/Article.js';
