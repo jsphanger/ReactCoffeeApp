@@ -155,7 +155,7 @@ class Article extends Component{
             <div className="articleTextBlock col-md-8 col-xs-12">
               <div>
                 <h2><Link to={{ pathname: '/article/' + this.state.id }}> {this.state.title} </Link></h2>
-                <div>{ this.state.body.substring(0, 325) + "..." }</div>
+                <p dangerouslySetInnerHTML={{__html: this.state.body.substring(0, 325) + "..."}}></p>
               </div>
             </div>
           </div>
